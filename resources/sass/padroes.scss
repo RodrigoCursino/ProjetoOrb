@@ -1,0 +1,16 @@
+.btn-primary{
+    background-color: $tRed!important;
+    border: 1px solid $tRed!important;
+    color: #fff;
+    transition: all 0.2s linear;
+    &:hover, &:active{
+        background-color: $white!important;
+        color: $tRed;
+        border: 1px solid $tRed;
+    }
+}
+
+.form-check [type=checkbox]:not(:checked), .form-check [type=checkbox]:checked{
+    position: relative;
+    left: initial;
+}

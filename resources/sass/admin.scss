@@ -1,0 +1,176 @@
+body[data-background-color="tmontec"],
+div[data-background-color="tmontec"],
+nav[data-background-color="tmontec"],
+footer[data-background-color="tmontec"]{
+    background-color: $tRed;
+    *{
+        color: $white;
+    }
+}
+
+div[data-background-color="tmontec-dark"],
+footer[data-background-color="tmontec-dark"]{
+    background-color: $gray;
+    *{
+        color: $white;
+    }
+}
+
+.bg-login{
+    background-image: url("../imagens/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 0;
+
+    .form{
+        padding-top: 10px;
+        background-color: rgba(255,255,255,0.5);
+        height: 100%;
+    }
+
+    .box-login{
+        height: 100%;
+        .card{
+            background-color: rgba(255,255,255,0.5);
+            border: none;
+            .card-header{
+                background-color: $tRed;
+                text-align: center;
+                font-size: 28px;
+                color: $white;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                //border: none;
+            }
+            .card-body{
+                label{
+                    color: #000;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .btn-square{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+
+        .btn-login{
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .logo-login{
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            img{
+                display: block;
+                width: 340px;
+                margin: 0 auto;
+            }
+        }
+
+        .btn-link{
+            color: $gray;
+        }
+    }
+}
+
+.logo-header{
+    img{
+        max-width: 100%;
+        margin-top: 5px;
+        margin: 0 auto;
+    }
+}
+
+.dropdown{
+    a, ul{
+        color: $gray!important;
+    }
+}
+
+.sidebar .nav.nav-primary > .nav-item.active a i,
+.sidebar[data-background-color=white] .nav.nav-primary > .nav-item.active a i{
+    color: $white!important;
+}
+
+.sidebar .nav > .nav-item a p,
+.sidebar .nav > .nav-item a:focus p,
+.sidebar[data-background-color=white] .nav > .nav-item a p,
+.sidebar[data-background-color=white] .nav > .nav-item a:focus p{
+    color: $semi-white!important;
+}
+
+.sidebar .nav > .nav-item.active > a p,
+.sidebar[data-background-color=white] .nav > .nav-item.active > a p{
+    color: $semi-white!important;
+}
+
+.sidebar .nav.nav-primary > .nav-item.active a:before,
+.sidebar[data-background-color=white] .nav.nav-primary > .nav-item.active a:before,
+.sidebar .nav.nav-primary > .nav-item.submenu a:before,
+.sidebar[data-background-color=white] .nav.nav-primary > .nav-item.submenu a:before{
+    background: $white!important;
+    font-weight: bold;
+}
+
+.sidebar .nav.nav-primary > .nav-item a[data-toggle=collapse][aria-expanded=true]:before,
+.sidebar[data-background-color=white] .nav.nav-primary > .nav-item a[data-toggle=collapse][aria-expanded=true]:before {
+    background: $white!important;
+}
+
+.sidebar .nav.nav-primary > .nav-item a[data-toggle=collapse][aria-expanded=false] i,
+.sidebar[data-background-color=white] .nav.nav-primary > .nav-item a[data-toggle=collapse][aria-expanded=false] i{
+    color: $white!important;
+}
+.sidebar .nav > .nav-item:hover a p,
+.sidebar[data-background-color=white] .nav > .nav-item:hover a p,
+.sidebar .nav > .nav-item.submenu:hover a p,
+.sidebar[data-background-color=white] .nav > .nav-item.submenu:hover a p{
+    color: $semi-white!important;
+}
+
+.sidebar{
+    .nav{
+        .nav-item{
+            &:hover, &:focus, &:hover:focus, &:hover:active, &.submenu{
+                background-color: $tRed!important;
+                a{
+                    color: $white!important;
+                    &:before{
+                        background: $white!important;
+                    }
+                    i{
+                        &:before{
+                            color: $white;
+                        }
+                    }
+                    p{
+                        color: $semi-white!important;
+                    }
+                }
+            }
+            &.active{
+                background-color: $tRed!important;
+                a{
+                    &:before{
+                        background: $white!important;
+                    }
+                    p{
+                        color: $semi-white!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
