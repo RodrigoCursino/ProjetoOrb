@@ -7,14 +7,14 @@
             <div class="page-inner py-5">
                 <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                     <div>
-                        <h2 class="text-white pb-2 fw-bold">Fornecedores</h2>
+                        <h2 class="text-white pb-2 fw-bold">Mercadorias</h2>
                     </div>
                     <div class="ml-md-auto py-2 py-md-0">
                         <button class="btn btn-secondary btn-round"
                                 data-toggle="modal"
                                 data-target="#formFornecedor"
                         >
-                            Add Fornecedor
+                            Add Mercadoria
                         </button>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="card-head-row card-tools-still-right">
-                                <h4 class="card-title">Cadastro Fornecedores</h4>
+                                <h4 class="card-title">Cadastro Mercadoria</h4>
                             </div>
                         </div>
                         <div class="card-body">

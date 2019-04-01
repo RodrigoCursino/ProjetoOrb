@@ -16,8 +16,6 @@ class CreateTabelaPrecoTable extends Migration
         Schema::create('tabela_preco', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->decimal('valor',10,2);
-            $table->date('data');
             $table->string('descricao', 500);
             $table->string('observacao', 500);
             $table->decimal('desconto_maximo', 3,2);

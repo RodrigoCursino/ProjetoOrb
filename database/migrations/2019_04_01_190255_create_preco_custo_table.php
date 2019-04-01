@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePrecoVendaTable extends Migration
+class CreatePrecoCustoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePrecoVendaTable extends Migration
      */
     public function up()
     {
-        Schema::create('preco_venda', function (Blueprint $table) {
+        Schema::create('preco_custo', function (Blueprint $table) {
             $table->increments('id');
             $table->decimal('valor',10,2);
             $table->date('data');
@@ -25,12 +25,14 @@ class CreatePrecoVendaTable extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            //Tabela de Preço
-            $table->integer('tabela_preco_id')->unsigned();
-            $table->foreign('tabela_preco_id')->references('id')
-                ->on('tabela_preco')
+            //Fronecedores
+            $table->integer('fornecedor_id')->unsigned();
+            $table->foreign('fornecedor_id')->references('id')
+                ->on('fornecedores')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+
+            //TODO */Falta acrescentar a chave estrangeira de nota de entrada*/
 
             $table->timestamps();
             $table->softDeletes();
@@ -44,6 +46,6 @@ class CreatePrecoVendaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('preco_venda');
+        Schema::dropIfExists('preco_custo');
     }
 }

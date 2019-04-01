@@ -4,33 +4,30 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFornecedoresTable extends Migration
+class CreateFabricantesTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('fornecedores', function (Blueprint $table) {
-
+        Schema::create('fabricantes', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->string('nome',350);
             $table->string('nome_fantasia',350);
             $table->string('razao_social',350);
             $table->string('cnpj',19);
             $table->string('ie',14);
             $table->string('observacao',500);
-            $table->boolean('forn_mercadoria');
-
-            //forignKeys
+            $table->enum('natureza_juridica',['FISÌCA','JURÍDICA']);
 
             //Endereço
             $table->integer('endereco_id')->unsigned();
             $table->foreign('endereco_id')->references('id')
-                  ->on('enderecos')
-                  ->onDelete('cascade')
-                  ->onUpdate('cascade');
-
-            //Dados Bancários
-            $table->integer('dados_bancarios_id')->unsigned();
-            $table->foreign('dados_bancarios_id')->references('id')
-                ->on('dados_bancarios')
+                ->on('enderecos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -46,8 +43,13 @@ class CreateFornecedoresTable extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('fornecedores');
+        Schema::dropIfExists('fabricantes');
     }
 }

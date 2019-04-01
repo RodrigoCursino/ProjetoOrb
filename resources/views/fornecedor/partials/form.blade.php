@@ -32,7 +32,7 @@
     <hr>
     <fieldset id="dados_bancarios">
     <!-- dados_bancarios -->
-    @include('fornecedor.partials.form_dados_bancarios')
+        @include('fornecedor.partials.form_dados_bancarios')
     <!-- dados_bancarios -->
     </fieldset>
     <div class="form-group">

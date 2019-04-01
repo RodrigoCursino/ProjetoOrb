@@ -18,6 +18,7 @@ class CreateDadosBancariosTable extends Migration
             $table->increments('id');
             $table->string('agencia',20);
             $table->string('conta',20);
+            $table->enum('tipo',['CORRENTE','POUPANÇA'])->default('CORRENTE');
 
             //Banco
             $table->integer('banco_id')->unsigned();
