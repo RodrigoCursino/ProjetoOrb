@@ -22,7 +22,11 @@ class FornecedoresController extends Controller
 
     public function index()
     {
-        $fornecedores = Fornecedor::paginate(5);
+        $fornecedores = Fornecedor::with('contato')
+                                  ->with('endereco')
+                                  ->with('dadosBancarios')
+                                  ->paginate(5);
+
         return view('fornecedor.index',compact('fornecedores'));
     }
 

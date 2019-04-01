@@ -19,4 +19,19 @@ class Fornecedor extends Model
         'observacao',
         'forn_mercadoria'
     ];
+
+    public function contato ()
+    {
+       return $this->belongsTo(Contato::class);
+    }
+
+    public function endereco ()
+    {
+       return $this->belongsTo(Endereco::class);
+    }
+
+    public function dadosBancarios ()
+    {
+       return $this->belongsTo(DadosBancarios::class);
+    }
 }
