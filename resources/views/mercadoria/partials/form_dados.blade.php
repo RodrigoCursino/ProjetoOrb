@@ -2,120 +2,160 @@
      <input type="hidden" name="_method" value="POST">
      <!-- Início do form -->
      {{csrf_field()}}
-     <input type="hidden" name="id_fornecedor">
+     <input type="hidden" name="id_mercadoria">
 
-     <!-- CNPJ e IE -->
+     <!-- Fornecedor -->
      <div class="form-group">
          <div class="row">
-             <!-- CNPJ -->
-             <div class="col-lg-6">
-                 <label for="cnpj">CNPJ : </label>
-                 <input type="text"
-                        name="cnpj"
-                        class="form-control"
-                        id="cnpj"
-                        value="{{old('cnpj')}}"
+             <!-- Grupo -->
+             <div class="col-lg-12">
+                 <label for="fornecedor_id">Fornecedor : </label>
+                 <select type="text"
+                         name="fornecedor_id"
+                         class="form-control"
+                         id="fornecedor_id"
                  >
-                 @if ($errors->has('cnpj'))
+                     @foreach($fornecedores as $fornecedor)
+                         <option value="{{$fornecedor->id}}">{{$fornecedor->nome_fantasia}}</option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('fornecedor_id'))
                      <span class="help-block text-danger">
-                    <strong>{{ $errors->first('cnpj') }}</strong>
-                </span>
+                        <strong>{{ $errors->first('fornecedor_id') }}</strong>
+                     </span>
                  @endif
              </div>
-             <!-- CNPJ -->
-             <!-- Inscrição Estadual -->
-             <div class="col-lg-6">
-                 <label for="ie">Inscrição Estadual : </label>
-                 <input type="text"
-                        name="ie"
-                        class="form-control"
-                        id="ie"
-                        value="{{old('ie')}}"
-                 >
-                 @if ($errors->has('ie'))
-                     <span class="help-block text-danger">
-                  <strong>{{ $errors->first('ie') }}</strong>
-                </span>
-                 @endif
-             </div>
-             <!-- Inscrição Estadual -->
          </div>
      </div>
-     <!-- CNPJ e IE -->
-
-     <!-- Nome Fantasia -->
-        <div class="form-group">
-            <label for="nome_fantasia">Nome Fantasia : </label>
-            <input type="text"
-                   name="nome_fantasia"
-                   class="form-control"
-                   id="nome_fantasia"
-                   value="{{old('nome_fantasia')}}"
-            >
-            @if ($errors->has('nome_fantasia'))
-                <span class="help-block text-danger">
-                    <strong>{{ $errors->first('nome_fantasia') }}</strong>
-                </span>
-            @endif
-        </div>
-     <!-- Nome Fantasia -->
-
-     <!-- Razão Social -->
-        <div class="form-group">
-            <label for="razao_social">Razão Social : </label>
-            <input type="text"
-                   name="razao_social"
-                   class="form-control"
-                   id="razao_social"
-                   value="{{old('razao_social')}}"
-            >
-            @if ($errors->has('razao_social'))
-                <span class="help-block text-danger">
-                   <strong>{{ $errors->first('razao_social') }}</strong>
-                </span>
-            @endif
-        </div>
-     <!-- Razão Social -->
-
-    <!-- Observação -->
-    <div class="form-group">
-        <label for="obsservao">Observação : </label>
-        <textarea
-               name="observacao"
-               class="form-control obsservao"
-               id="observao"
-        ></textarea>
-        @if ($errors->has('observacao'))
-            <span class="help-block text-danger">
-              <strong>{{ $errors->first('observacao') }}</strong>
-            </span>
-        @endif
-    </div>
-    <!-- Observação -->
+     <!-- Fornecedor -->
 
 
-     <!-- Fornece Mercadoria -->
-     <div class="form-check pull-right">
-         <label>Fornece Mercadoria :</label><br>
-         <label class="form-radio-label">
-             <input class="form-radio-input"
-                    type="radio"
-                    name="fron_mercadoria"
-                    value=""
-                    checked="checked"
-             >
-             <span class="form-radio-sign">Sim</span>
-         </label>
-         <label class="form-radio-label">
-             <input class="form-radio-input"
-                    type="radio"
-                    name="fron_mercadoria"
-                    value=""
-                    checked=""
-             >
-             <span class="form-radio-sign">Não</span>
-         </label>
+     <!-- Grupo -->
+     <div class="form-group">
+         <div class="row">
+             <!-- Grupo -->
+             <div class="col-lg-12">
+                 <label for="grupo_id">Grupo : </label>
+                 <select type="text"
+                         name="grupo_id"
+                         class="form-control"
+                         id="grupo_id"
+                 >
+                     @foreach($grupos as $grupo)
+                         <option value="{{$grupo->id}}">{{$grupo->nome}}</option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('grupo_id'))
+                     <span class="help-block text-danger">
+                        <strong>{{ $errors->first('grupo_id') }}</strong>
+                     </span>
+                 @endif
+             </div>
+         </div>
      </div>
-     <!-- Fornece Mercadoria -->
+     <!-- Grupo -->
+
+
+     <!-- Sub Grupo -->
+     <div class="form-group">
+         <div class="row">
+             <!-- Sub Grupo -->
+             <div class="col-lg-12" id="sub_grupos">
+                 <label for="sub_grupo_id">Sub Grupo : </label>
+                 <select type="text"
+                         disabled
+                         name="sub_grupo_id"
+                         class="form-control"
+                         id="sub_grupo_id"
+                 >
+                    <option value="">Selecione um Sub Grupo</option>
+                 </select>
+                 @if ($errors->has('sub_grupo_id'))
+                     <span class="help-block text-danger">
+                        <strong>{{ $errors->first('sub_grupo_id') }}</strong>
+                     </span>
+                 @endif
+             </div>
+         </div>
+     </div>
+     <!-- Sub Grupo -->
+
+     <!-- Nome e NCM -->
+     <div class="form-group">
+         <div class="row">
+             <!-- Nome -->
+             <div class="col-lg-6">
+                 <label for="nome">Nome : </label>
+                 <input type="text"
+                        name="nome"
+                        class="form-control"
+                        id="nome"
+                        value="{{old('nome')}}"
+                 >
+                 @if ($errors->has('nome'))
+                     <span class="help-block text-danger">
+                    <strong>{{ $errors->first('nome') }}</strong>
+                </span>
+                 @endif
+             </div>
+             <!-- Nome -->
+             <!-- NCM -->
+             <div class="col-lg-6">
+                 <label for="ncm">NCM : </label>
+                 <input type="text"
+                        name="ncm"
+                        class="form-control"
+                        id="ncm"
+                        value="{{old('ncm')}}"
+                 >
+                 @if ($errors->has('ncm'))
+                     <span class="help-block text-danger">
+                  <strong>{{ $errors->first('ncm') }}</strong>
+                </span>
+                 @endif
+             </div>
+             <!-- NCM -->
+         </div>
+     </div>
+     <!-- Nome e NCM -->
+
+     <!-- Unidade Mediada e Unidade Caixa -->
+     <div class="form-group">
+         <div class="row">
+             <!-- Unidade Medida -->
+             <div class="col-lg-6">
+                 <label for="unidade_medida">Unidade Medida : </label>
+                 <input type="text"
+                        name="unidade_medida"
+                        class="form-control"
+                        id="unidade_medida"
+                        value="{{old('unidade_medida')}}"
+                 >
+                 @if ($errors->has('unidade_medida'))
+                     <span class="help-block text-danger">
+                    <strong>{{ $errors->first('unidade_medida') }}</strong>
+                </span>
+                 @endif
+             </div>
+             <!-- Unidade Medida -->
+             <!-- Unidade Caixa -->
+             <div class="col-lg-6">
+                 <label for="unidade_caixa">Unidade Caixa : </label>
+                 <input type="text"
+                        name="unidade_caixa"
+                        class="form-control"
+                        id="unidade_caixa"
+                        value="{{old('unidade_caixa')}}"
+                 >
+                 @if ($errors->has('unidade_caixa'))
+                     <span class="help-block text-danger">
+                  <strong>{{ $errors->first('unidade_caixa') }}</strong>
+                </span>
+                 @endif
+             </div>
+             <!-- Unidade Caixa -->
+         </div>
+     </div>
+     <!-- Unidade Mediada e Unidade Caixa -->
 
     <!-- Fim do form -->

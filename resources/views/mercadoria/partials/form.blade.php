@@ -1,14 +1,14 @@
 <form method="POST"
       enctype="multipart/form-data"
       id="form_fornecedor"
-      action="{{route('fornecedores.store')}}"
+      action="{{route('mercadorias.store')}}"
 >
     {{method_field('post')}}
     <h4 class="text-center">Dados</h4>
     <hr>
     <fieldset id="dados">
     <!-- dados -->
-        @include('fornecedor.partials.form_dados')
+        @include('mercadoria.partials.form_dados')
     <!-- dados -->
     </fieldset>
     <br>
@@ -16,7 +16,7 @@
     <hr>
     <fieldset id="endereco">
     <!-- endereco -->
-        @include('fornecedor.partials.form_endereco')
+        @include('mercadoria.partials.form_preco')
     <!-- endereco -->
     </fieldset>
     <br>
@@ -24,7 +24,7 @@
     <hr>
     <fieldset id="contato">
     <!-- contato -->
-        @include('fornecedor.partials.form_contato')
+        @include('mercadoria.partials.form_contato')
     <!-- contato -->
     </fieldset>
     <br>
@@ -32,7 +32,7 @@
     <hr>
     <fieldset id="dados_bancarios">
     <!-- dados_bancarios -->
-    @include('fornecedor.partials.form_dados_bancarios')
+    @include('mercadoria.partials.form_dados_bancarios')
     <!-- dados_bancarios -->
     </fieldset>
     <div class="form-group">

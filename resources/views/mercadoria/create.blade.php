@@ -32,7 +32,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
-                                    @include('fornecedor.partials.form')
+                                    @include('mercadoria.partials.form')
                                 </div>
                             </div>
                         </div>
