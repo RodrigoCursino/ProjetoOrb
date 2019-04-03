@@ -19432,6 +19432,8 @@ __webpack_require__(/*! ./mercadorias/mercadoria */ "./resources/js/mercadorias/
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./helpers */ "./resources/js/helpers.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19507,6 +19509,22 @@ $(document).ready(function () {
 
   window.getCod = function (cod) {
     $('#cod').val(cod);
+  };
+});
+
+/***/ }),
+
+/***/ "./resources/js/helpers.js":
+/*!*********************************!*\
+  !*** ./resources/js/helpers.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  window.deleteElement = function (route) {
+    $('#form_delete').attr('action', route);
+    $('#form_delete').submit();
   };
 });
 

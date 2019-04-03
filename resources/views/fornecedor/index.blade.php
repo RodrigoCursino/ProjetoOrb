@@ -65,12 +65,11 @@
                                                                 </a>
                                                             </td>
                                                             <td>
-                                                                <a class="btn btn-danger"
-                                                                   href="{{route('fornecedores.destroy',['id' => $fornecedor->id])}}"
+                                                                <button class="btn btn-danger" onclick="deleteElement('{{route("fornecedores.destroy",["id" => $fornecedor->id])}}')"
                                                                 >
                                                                     <i class="fa fa-trash">
                                                                     </i>
-                                                                </a>
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                     @endforeach

@@ -71,10 +71,10 @@ class FornecedorService
 
     public function update(FornecedorCreateRequest $request, $id)
     {
-        return DB::transaction(function () use ($request) {
+        return DB::transaction(function () use ($request, $id) {
 
             //Fornecedor
-            $fornecedor = Fornecedor::findOrFail($request->input('fornecedor_id'));
+            $fornecedor = Fornecedor::findOrFail($id);
 
             $fornecedor->cnpj             = $request->input('cnpj');
             $fornecedor->ie               = $request->input('ie');
@@ -109,5 +109,30 @@ class FornecedorService
             return $fornecedor;
 
         });
+
+    }
+
+    public function destroy($id)
+    {
+      return DB::transaction(function () use ($id) {
+       $fornecedor = Fornecedor::findOrFail($id);
+
+       // Contato
+       $contato    = Contato::findOrFail($fornecedor->contato_id);
+       $contato->delete();
+
+       // Endereco
+       $endereco   = Endereco::findOrFail($fornecedor->endereco_id);
+       $endereco->delete();
+
+       // Dados Bancários
+       $dadosBancarios   = DadosBancarios::findOrFail($fornecedor->dados_bancarios_id);
+       $dadosBancarios->delete();
+
+       $fornecedor->delete();
+
+       return true;
+
+      });
     }
 }

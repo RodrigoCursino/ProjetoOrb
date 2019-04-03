@@ -1,9 +1,5 @@
 
-     <input type="hidden" name="_method" value="POST">
      <!-- Início do form -->
-     {{csrf_field()}}
-     <input type="hidden" name="id_mercadoria">
-
      <!-- Fornecedor -->
      <div class="form-group">
          <div class="row">
@@ -16,7 +12,7 @@
                          id="fornecedor_id"
                  >
                      @foreach($fornecedores as $fornecedor)
-                         <option value="{{$fornecedor->id}}">{{$fornecedor->nome_fantasia}}</option>
+                         <option {{isset($mercadoria->fornecedor_id) && $mercadoria->fornecedor_id == $fornecedor->id ? "selected" : ""}}  value="{{$fornecedor->id}}">{{$fornecedor->nome_fantasia}}</option>
                      @endforeach
                  </select>
                  @if ($errors->has('fornecedor_id'))
@@ -42,7 +38,7 @@
                          id="grupo_id"
                  >
                      @foreach($grupos as $grupo)
-                         <option value="{{$grupo->id}}">{{$grupo->nome}}</option>
+                         <option {{isset($mercadoria->grupo_id) && $mercadoria->grupo_id == $grupo->id ? "selected" : ""}} value="{{$grupo->id}}">{{$grupo->nome}}</option>
                      @endforeach
                  </select>
                  @if ($errors->has('grupo_id'))
@@ -63,12 +59,15 @@
              <div class="col-lg-12" id="sub_grupos">
                  <label for="sub_grupo_id">Sub Grupo : </label>
                  <select type="text"
-                         disabled
+                         {{isset($mercadoria->sub_grupo_id) ? "" : "disabled"}}
                          name="sub_grupo_id"
                          class="form-control"
                          id="sub_grupo_id"
                  >
-                    <option value="">Selecione um Sub Grupo</option>
+                    <option {{isset($mercadoria->sub_grupo_id) ? "value='".$mercadoria->sub_grupo_id."'" : "value=''"}}
+                    >
+                        {{isset($mercadoria->subGrupo->nome) ? $mercadoria->subGrupo->nome : "Selecione um Sub Grupo"}}
+                    </option>
                  </select>
                  @if ($errors->has('sub_grupo_id'))
                      <span class="help-block text-danger">
@@ -90,7 +89,7 @@
                         name="nome"
                         class="form-control"
                         id="nome"
-                        value="{{old('nome')}}"
+                        value="{{isset($mercadoria->nome) ? $mercadoria->nome : old('nome')}}"
                  >
                  @if ($errors->has('nome'))
                      <span class="help-block text-danger">
@@ -106,7 +105,7 @@
                         name="ncm"
                         class="form-control"
                         id="ncm"
-                        value="{{old('ncm')}}"
+                        value="{{isset($mercadoria->ncm) ? $mercadoria->ncm : old('ncm')}}"
                  >
                  @if ($errors->has('ncm'))
                      <span class="help-block text-danger">
@@ -129,7 +128,7 @@
                         name="unidade_medida"
                         class="form-control"
                         id="unidade_medida"
-                        value="{{old('unidade_medida')}}"
+                        value="{{isset($mercadoria->unidade_medida) ? $mercadoria->unidade_medida : old('unidade_medida')}}"
                  >
                  @if ($errors->has('unidade_medida'))
                      <span class="help-block text-danger">
@@ -145,7 +144,7 @@
                         name="unidade_caixa"
                         class="form-control"
                         id="unidade_caixa"
-                        value="{{old('unidade_caixa')}}"
+                        value="{{isset($mercadoria->unidade_caixa) ? $mercadoria->unidade_caixa : old('unidade_caixa')}}"
                  >
                  @if ($errors->has('unidade_caixa'))
                      <span class="help-block text-danger">
@@ -157,5 +156,21 @@
          </div>
      </div>
      <!-- Unidade Mediada e Unidade Caixa -->
+
+     <!-- Observação -->
+     <div class="form-group">
+         <label for="observacao">Observação : </label>
+         <textarea
+                 name="observacao"
+                 class="form-control"
+                 id="observacao"
+         >{{isset($mercadoria->observacao) ? $mercadoria->observacao : old('observacao')}}</textarea>
+         @if ($errors->has('observacao'))
+             <span class="help-block text-danger">
+              <strong>{{ $errors->first('observacao') }}</strong>
+            </span>
+         @endif
+     </div>
+     <!-- Observação -->
 
     <!-- Fim do form -->

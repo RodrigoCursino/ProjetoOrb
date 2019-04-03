@@ -18,7 +18,7 @@ class CreateTabelaPrecoTable extends Migration
             $table->increments('id');
             $table->string('descricao', 500);
             $table->string('observacao', 500);
-            $table->decimal('desconto_maximo', 3,2);
+            $table->decimal('desconto_maximo', 8,2);
             $table->dateTime('validade');
 
             $table->timestamps();

@@ -20,4 +20,19 @@ class Mercadoria extends Model
        'unidade_caixa',
        'observacao'
     ];
+
+    public function precoVenda()
+    {
+        return $this->hasMany(PrecoVenda::class)->with('observacoes');
+    }
+
+    public function subGrupo()
+    {
+        return $this->belongsTo(SubGrupo::class);
+    }
+
+    public function precoCusto()
+    {
+        return $this->hasMany(PrecoCusto::class);
+    }
 }

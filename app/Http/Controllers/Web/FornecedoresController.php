@@ -64,12 +64,14 @@ class FornecedoresController extends Controller
     public function update(FornecedorCreateRequest $request, $id)
     {
         $fornecedor = $this->service->update($request, $id);
-        redirect(route('fornecedores.index'));
+        return redirect(route('fornecedores.index'));
     }
 
 
     public function destroy($id)
     {
-        //
+       if($this->service->destroy($id)){
+         return redirect(route('fornecedores.index'));
+       }
     }
 }

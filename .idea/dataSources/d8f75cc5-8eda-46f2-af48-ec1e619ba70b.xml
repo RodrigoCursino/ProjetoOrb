@@ -2352,7 +2352,7 @@
     </column>
     <column id="498" parent="266" name="desconto_maximo">
       <Position>4</Position>
-      <DataType>decimal(3,2 digit)|0s</DataType>
+      <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

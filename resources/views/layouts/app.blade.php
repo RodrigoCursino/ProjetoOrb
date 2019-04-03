@@ -310,6 +310,7 @@
                     {{--<div class="content">--}}
                         {{--<div class="page-inner">--}}
                             @yield('content')
+                            @include('helper.form_delete')
                         {{--</div>--}}
                     {{--</div>--}}
                     <footer class="footer" data-background-color="tmontec-dark">
