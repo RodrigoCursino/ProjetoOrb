@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4adfdb5-d1ac-49cf-9c38-4eac68751491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/mercadoria/partials/form_preco_custo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mercadoria/partials/form_preco_venda.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d8f75cc5-8eda-46f2-af48-ec1e619ba70b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d8f75cc5-8eda-46f2-af48-ec1e619ba70b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/FornecedoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/FornecedoresController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Service/FornecedorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service/FornecedorService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fornecedor/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fornecedor/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fornecedor/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fornecedor/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_contato.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_contato.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados_bancarios.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados_bancarios.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/side-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/side-bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mercadoria/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mercadoria/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mercadoria/partials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mercadoria/partials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mercadoria/partials/form_dados_bancarios.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mercadoria/partials/form_preco.blade.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,11 +65,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_contato.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="1166">
               <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados_bancarios.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="54" column="144" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -104,9 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="98" column="30" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-              <caret line="107" column="30" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+            <state relative-caret-position="176">
+              <caret line="65" column="113" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="113" />
             </state>
           </provider>
         </entry>
@@ -175,7 +177,6 @@
         <option value="$PROJECT_DIR$/resources/views/fornecedor/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mercadoria/index.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell_3" />
-        <option value="$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados_bancarios.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell_4" />
         <option value="$PROJECT_DIR$/resources/views/fornecedor/partials/form.blade.php" />
@@ -183,6 +184,7 @@
         <option value="$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados.blade.php" />
         <option value="$PROJECT_DIR$/app/Service/FornecedorService.php" />
         <option value="$PROJECT_DIR$/resources/views/fornecedor/partials/form_contato.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php" />
       </list>
     </option>
   </component>
@@ -294,7 +296,7 @@
       <path value="$PROJECT_DIR$/vendor/artesaos/defender" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1374" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -427,12 +429,12 @@
       <workItem from="1554230578412" duration="443000" />
       <workItem from="1554232920406" duration="5529000" />
       <workItem from="1554247524570" duration="2891000" />
-      <workItem from="1554310983114" duration="4965000" />
+      <workItem from="1554310983114" duration="5344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61392000" />
+    <option name="totallyTimeSpent" value="61771000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -447,7 +449,7 @@
     <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3343419" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3343419" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -765,20 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados_bancarios.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="54" column="144" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/mercadoria/partials/form_dados.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
@@ -821,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="98" column="30" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-          <caret line="107" column="30" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Service/FornecedorService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -851,8 +831,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_contato.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="1166">
           <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados_bancarios.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="54" column="144" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_dados.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="65" column="113" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/fornecedor/partials/form_endereco.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="133" column="28" selection-start-line="133" selection-start-column="28" selection-end-line="133" selection-end-column="28" />
         </state>
       </provider>
     </entry>
