@@ -45,6 +45,8 @@
                                                             <th>CNPJ</th>
                                                             <th>Inscrição Estadual</th>
                                                             <th>Telefone</th>
+                                                            <th>Editar</th>
+                                                            <th>Delete</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -55,6 +57,21 @@
                                                             <td>{{$fornecedor->cnpj}}</td>
                                                             <td>{{$fornecedor->ie}}</td>
                                                             <td>{{$fornecedor->contato->telefone}}</td>
+                                                            <td>
+                                                                <a class="btn btn-primary"
+                                                                   href="{{route('fornecedores.edit',['id' => $fornecedor->id])}}"
+                                                                >
+                                                                    <i class="fa fa-edit"></i>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-danger"
+                                                                   href="{{route('fornecedores.destroy',['id' => $fornecedor->id])}}"
+                                                                >
+                                                                    <i class="fa fa-trash">
+                                                                    </i>
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                     @endforeach
                                                     </tbody>

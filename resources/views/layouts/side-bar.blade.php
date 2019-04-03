@@ -72,21 +72,43 @@
                     </a>
                     <div class="collapse" id="submenu">
                         <ul class="nav nav-collapse">
+                            <!-- fornecedor -->
                             <li>
                                 <a data-toggle="collapse" href="#subnav1">
-                                    <span class="sub-item">Level 1</span>
+                                    <span class="sub-item">Fornecedor</span>
                                     <span class="caret"></span>
                                 </a>
                                 <div class="collapse" id="subnav1">
                                     <ul class="nav nav-collapse subnav">
                                         <li>
-                                            <a href="#">
-                                                <span class="sub-item">Level 2</span>
+                                            <a href="{{route('fornecedores.index')}}">
+                                                <span class="sub-item">Listagem</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                <span class="sub-item">Level 2</span>
+                                            <a href="{{route('fornecedores.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- mercadoria -->
+                            <li>
+                                <a data-toggle="collapse" href="#subnav1">
+                                    <span class="sub-item">Mercadoria</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="subnav1">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('mercadorias.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('mercadorias.create')}}">
+                                                <span class="sub-item">Cadastro</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -113,6 +135,7 @@
                                 </a>
                             </li>
                         </ul>
+
                     </div>
                 </li>
             </ul>

@@ -46,18 +46,25 @@ class FornecedoresController extends Controller
 
     public function show($id)
     {
-        //
+
     }
 
     public function edit($id)
     {
-        //
+        $fornecedor = Fornecedor::with('contato')
+            ->with('endereco')
+            ->with('dadosBancarios')
+            ->where('id','=',$id)->first();
+
+        $bancos = Banco::all();
+
+        return view('fornecedor.create',compact('bancos','fornecedor'));
     }
 
     public function update(FornecedorCreateRequest $request, $id)
     {
         $fornecedor = $this->service->update($request, $id);
-        //return redirect(route('fornecedores.index'));
+        redirect(route('fornecedores.index'));
     }
 
 

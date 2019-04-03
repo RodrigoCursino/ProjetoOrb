@@ -9,7 +9,7 @@
                         name="agencia"
                         class="form-control"
                         id="agencia"
-                        value="{{old('agencia')}}"
+                        value="{{isset($fornecedor->dadosBancarios->agencia) ? $fornecedor->dadosBancarios->agencia : old('agencia')}}"
                  >
                  @if ($errors->has('agencia'))
                      <span class="help-block text-danger">
@@ -25,7 +25,7 @@
                         name="conta"
                         class="form-control"
                         id="conta"
-                        value="{{old('conta')}}"
+                        value="{{isset($fornecedor->dadosBancarios->conta) ? $fornecedor->dadosBancarios->conta : old('conta')}}"
                  >
                  @if ($errors->has('conta'))
                      <span class="help-block text-danger">
@@ -42,6 +42,26 @@
      <!-- Banco E Conta -->
      <div class="form-group">
          <div class="row">
+         <!-- Tipo de Conta -->
+             <div class="col-lg-6">
+                 <label for="banco_id">Tipo de Conta : </label>
+                 <select type="text"
+                         name="tipo"
+                         class="form-control"
+                         id="tipo"
+                 >
+                      <option {{isset($fornecedor->dadosBancarios->tipo) && $fornecedor->dadosBancarios->tipo == "CORRENTE"  ? "selected" : ""}}
+                              value="CORRENTE">Corrente</option>
+                      <option {{isset($fornecedor->dadosBancarios->tipo) && $fornecedor->dadosBancarios->tipo == "POUPANÇA"  ? "selected" : ""}}
+                              value="POUPANÇA">Poupança</option>
+                 </select>
+                 @if ($errors->has('tipo'))
+                     <span class="help-block text-danger">
+                       <strong>{{ $errors->first('tipo') }}</strong>
+                     </span>
+                 @endif
+             </div>
+         <!-- Tipo de Conta -->
          <!-- Banco -->
          <div class="col-lg-6">
              <label for="banco_id">Banco : </label>
@@ -51,7 +71,11 @@
                      id="banco_id"
              >
                  @foreach($bancos as $banco)
-                     <option value="{{$banco->id}}">{{$banco->nome}}</option>
+                     <option {{isset($fornecedor->dadosBancarios->banco_id) && $fornecedor->dadosBancarios->banco_id == $banco->id  ? "selected" : ""}}
+                             value="{{$banco->id}}"
+                     >
+                         {{$banco->nome}}
+                     </option>
                  @endforeach
              </select>
              @if ($errors->has('banco_id'))
@@ -61,22 +85,6 @@
              @endif
          </div>
          <!-- Banco -->
-         <!-- Código -->
-            <div class="col-lg-6">
-             <label for="cod">Código : </label>
-             <input type="text"
-                    name="cod"
-                    class="form-control"
-                    id="cod"
-                    value="{{old('cod')}}"
-             >
-             @if ($errors->has('cod'))
-                 <span class="help-block text-danger">
-                  <strong>{{ $errors->first('cod') }}</strong>
-                </span>
-             @endif
-         </div>
-         <!-- Código -->
          </div>
      </div>
      <!-- Banco E Conta -->

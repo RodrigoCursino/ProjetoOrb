@@ -57,7 +57,7 @@ class FornecedorService
             $fornecedor->nome_fantasia       = $request->input('nome_fantasia');
             $fornecedor->razao_social        = $request->input('razao_social');
             $fornecedor->observacao          = $request->input('observacao');
-            $fornecedor->forn_mercadoria     = 1;
+            $fornecedor->forn_mercadoria     = $request->input('forn_mercadoria');
             $fornecedor->endereco_id         = $endereco->id;
             $fornecedor->contato_id          = $contato->id;
             $fornecedor->dados_bancarios_id  = $dados_bancario->id;

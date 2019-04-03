@@ -45,6 +45,8 @@
                                                             <th>Grupo</th>
                                                             <th>Sub Grupo</th>
                                                             <th>Fornecedor</th>
+                                                            <th>Editar</th>
+                                                            <th>Deletar</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -55,6 +57,21 @@
                                                             <td>{{$mercadoria->grupo_id}}</td>
                                                             <td>{{$mercadoria->sub_grupo_id}}</td>
                                                             <td>{{$mercadoria->fornecedor_id}}</td>
+                                                            <td>
+                                                                <a class="btn btn-primary"
+                                                                   href="{{route('mercadorias.edit',['id' => $mercadoria->id])}}"
+                                                                >
+                                                                    <i class="fa fa-edit"></i>
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-danger"
+                                                                   href="{{route('mercadorias.destroy',['id' => $mercadoria->id])}}"
+                                                                >
+                                                                    <i class="fa fa-trash">
+                                                                    </i>
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                     @endforeach
                                                     </tbody>
