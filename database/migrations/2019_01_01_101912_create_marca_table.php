@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContatosTable extends Migration
+class CreateMarcaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,21 @@ class CreateContatosTable extends Migration
      */
     public function up()
     {
-        Schema::create('contatos', function (Blueprint $table) {
+        Schema::create('marca', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome')->default('');
-            $table->string('telefone');
-            $table->string('celular');
-            $table->string('email');
+            $table->string('nome',100);
+
+            //ForeignKeys
+
+            //Marca
+            $table->integer('fabricante_id')->unsigned();
+            $table->foreign('fabricante_id')->references('id')
+                ->on('fabricantes')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->boolean('ativo')->default(1);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -33,6 +38,6 @@ class CreateContatosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contatos');
+        Schema::dropIfExists('marca');
     }
 }

@@ -3,7 +3,7 @@
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class PrecoVendaTableSeeder extends Seeder
+class PrecoCustoTableSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -12,6 +12,6 @@ class PrecoVendaTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\PrecoVenda::class, 50)->create();
+        factory(App\Models\PrecoCusto::class, 250)->create();
     }
 }

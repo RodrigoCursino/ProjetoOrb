@@ -40,7 +40,7 @@ class MercadoriasController extends Controller
     public function store(MercadoriaCreateRequest $request)
     {
         $mercadoria = $this->service->create($request);
-        return redirect(route('mercadoria.index'));
+        return redirect(route('mercadorias.index'));
     }
 
     public function show($id)
@@ -69,11 +69,13 @@ class MercadoriasController extends Controller
     public function update(MercadoriaCreateRequest $request, $id)
     {
         $mercadoria = $this->service->update($request,$id);
-        return redirect(route('mercadoria.index'));
+        return redirect(route('mercadorias.index'));
     }
 
     public function destroy($id)
     {
-        //
+       if($this->service->destroy($id)) {
+         return redirect(route('mercadorias.index'));
+       }
     }
 }

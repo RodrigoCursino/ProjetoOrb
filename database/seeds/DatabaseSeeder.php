@@ -20,5 +20,8 @@ class DatabaseSeeder extends Seeder
       $this->call(GruposTableSeeder::class);
       $this->call(SubGruposTableSeeder::class);
       $this->call(MercadoriasTableSeeder::class);
+      $this->call(TabelaPrecosTableSeeder::class);
+      $this->call(PrecoVendaTableSeeder::class);
+      $this->call(PrecoCustoTableSeeder::class);
     }
 }

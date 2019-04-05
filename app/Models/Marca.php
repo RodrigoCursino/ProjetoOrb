@@ -5,16 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class PrecoCusto extends Model
+class Marca extends Model
 {
     use SoftDeletes;
-    protected $table = 'preco_custo';
 
     protected $dates = ['deleted_at'];
 
+    protected $table = 'marca';
+
     protected $fillable = [
         'id',
-        'valor',
-        'data'
+        'nome'
     ];
+
+    public function fabricante()
+    {
+        return $this->belongsTo(Fabricante::class);
+    }
 }

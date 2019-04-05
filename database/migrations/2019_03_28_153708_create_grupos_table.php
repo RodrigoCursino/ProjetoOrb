@@ -18,6 +18,7 @@ class CreateGruposTable extends Migration
             $table->string('nome',30);
             $table->string('observacao',500);
             $table->string('ncm',60)->default('');
+            $table->boolean('ativo')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

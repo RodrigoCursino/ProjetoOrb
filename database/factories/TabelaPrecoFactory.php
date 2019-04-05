@@ -3,11 +3,11 @@
 use Faker\Generator as Faker;
 
 
-$factory->define(App\Models\PrecoCusto::class, function (Faker $faker) {
+$factory->define(App\Models\TabelaPreco::class, function (Faker $faker) {
     return [
-        "valor"           => $faker->randomFloat(2,5,1000),
-        "data"            => $faker->date('Y-m-d'),
-        "mercadoria_id"   => $faker->numberBetween(1,250),
-        "fornecedor_id"   => $faker->numberBetween(1,50)
+        "descricao"       => $faker->text(250),
+        "observacao"      => $faker->text(250),
+        "desconto_maximo" => $faker->randomFloat(2,0,1000),
+        "validade"        => $faker->date('Y-m-d')
     ];
 });

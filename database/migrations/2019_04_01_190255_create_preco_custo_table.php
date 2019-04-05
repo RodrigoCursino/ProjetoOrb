@@ -17,6 +17,7 @@ class CreatePrecoCustoTable extends Migration
             $table->increments('id');
             $table->decimal('valor',10,2);
             $table->date('data');
+            $table->boolean('ativo')->default(1);
 
             //Mercadorias
             $table->integer('mercadoria_id')->unsigned();

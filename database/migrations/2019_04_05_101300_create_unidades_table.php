@@ -4,34 +4,39 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFornecedoresTable extends Migration
+class CreateUnidadesTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('fornecedores', function (Blueprint $table) {
-
+        Schema::create('unidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome_fantasia',350);
-            $table->string('razao_social',350);
-            $table->string('cnpj',19);
-            $table->string('ie',14);
+            $table->string('nome',250);
+            $table->string('razao_social',250);
+            $table->string('nome_fantasia',250);
+            $table->string('cnpj',20);
+            $table->string('ie',20);
+            $table->boolean('loja')->default(1);
             $table->string('observacao',500);
-            $table->boolean('forn_mercadoria');
             $table->boolean('ativo')->default(1);
 
             //forignKeys
 
+            //Centro Custo
+            $table->integer('centro_custo_id')->unsigned();
+            $table->foreign('centro_custo_id')->references('id')
+                ->on('centro_custo')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+
             //Endereço
             $table->integer('endereco_id')->unsigned();
             $table->foreign('endereco_id')->references('id')
-                  ->on('enderecos')
-                  ->onDelete('cascade')
-                  ->onUpdate('cascade');
-
-            //Dados Bancários
-            $table->integer('dados_bancarios_id')->unsigned();
-            $table->foreign('dados_bancarios_id')->references('id')
-                ->on('dados_bancarios')
+                ->on('enderecos')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -42,13 +47,19 @@ class CreateFornecedoresTable extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
+            $table->integer('unidade_estoque_id')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('fornecedores');
+        Schema::dropIfExists('unidades');
     }
 }

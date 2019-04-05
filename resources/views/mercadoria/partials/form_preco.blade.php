@@ -1,5 +1,8 @@
 <!-- Começo Form -->
     <!-- Preço custo e Venda -->
+    @if(isset($mercadoria->precoCusto[0]->{'id'}))
+        <input type="hidden" name="preco_custo_id" value="{{ $mercadoria->precoCusto[0]->{'id'} }}">
+    @endif
     <div class="form-group">
         <div class="row">
             <!-- Valor Custo -->
@@ -19,7 +22,10 @@
             </div>
             <!-- Valor Custo -->
 
-            <!-- Valor -->
+            <!-- Valor Venda -->
+            @if(isset($mercadoria->precoVenda[0]->{'id'}))
+                <input type="hidden" name="preco_venda_id" value="{{ $mercadoria->precoVenda[0]->{'id'} }}">
+            @endif
             <div class="col-lg-6">
                 <label for="valor_venda">Valor Venda : </label>
                 <input type="text"
@@ -67,7 +73,7 @@
                    name="validade_venda"
                    class="form-control"
                    id="validade_venda"
-                   value="{{isset($mercadoria->precoVenda[0]->{'observacoes'}->validade) ? $mercadoria->precoVenda[0]->{'observacoes'}->validade : old('validade_venda')}}"
+                   value="{{isset($mercadoria->precoVenda[0]->{'observacoes'}->validade) ? date('Y-m-d',strtotime($mercadoria->precoVenda[0]->{'observacoes'}->validade)) : old('validade_venda')}}"
             >
             @if ($errors->has('validade_venda'))
                 <span class="help-block  text-danger">
@@ -90,8 +96,8 @@
     >{{isset($mercadoria->precoVenda[0]->{'observacoes'}->descricao) ? $mercadoria->precoVenda[0]->{'observacoes'}->descricao : old('descricao_preco_venda')}}</textarea>
     @if ($errors->has('descricao_preco_venda'))
         <span class="help-block text-danger">
-              <strong>{{ $errors->first('descricao_preco_venda') }}</strong>
-            </span>
+           <strong>{{ $errors->first('descricao_preco_venda') }}</strong>
+        </span>
     @endif
 </div>
 <!-- Descrição Preço de Venda -->

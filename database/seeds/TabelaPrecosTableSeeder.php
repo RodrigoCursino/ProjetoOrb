@@ -3,7 +3,7 @@
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class BancosTableSeeder extends Seeder
+class TabelaPrecosTableSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -12,6 +12,6 @@ class BancosTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\Banco::class, 5)->create();
+        factory(App\Models\TabelaPreco::class, 5)->create();
     }
 }

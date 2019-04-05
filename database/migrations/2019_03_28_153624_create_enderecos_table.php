@@ -23,6 +23,7 @@ class CreateEnderecosTable extends Migration
             $table->string('cidade',150);
             $table->string('estado',150);
             $table->string('pais',150);
+            $table->boolean('ativo')->default(1);
 
             $table->timestamps();
             $table->softDeletes();
