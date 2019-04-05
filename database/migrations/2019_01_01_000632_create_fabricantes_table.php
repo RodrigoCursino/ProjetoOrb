@@ -23,6 +23,7 @@ class CreateFabricantesTable extends Migration
             $table->string('ie',14);
             $table->string('observacao',500);
             $table->enum('natureza_juridica',['FISÌCA','JURÍDICA']);
+            $table->boolean('ativo')->default(1);
 
             //Endereço
             $table->integer('endereco_id')->unsigned();
