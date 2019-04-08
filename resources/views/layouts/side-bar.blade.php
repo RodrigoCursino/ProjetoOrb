@@ -74,11 +74,11 @@
                         <ul class="nav nav-collapse">
                             <!-- fornecedor -->
                             <li>
-                                <a data-toggle="collapse" href="#subnav1">
+                                <a data-toggle="collapse" href="#fornecedor">
                                     <span class="sub-item">Fornecedor</span>
                                     <span class="caret"></span>
                                 </a>
-                                <div class="collapse" id="subnav1">
+                                <div class="collapse" id="fornecedor">
                                     <ul class="nav nav-collapse subnav">
                                         <li>
                                             <a href="{{route('fornecedores.index')}}">
@@ -95,11 +95,11 @@
                             </li>
                             <!-- mercadoria -->
                             <li>
-                                <a data-toggle="collapse" href="#subnav1">
+                                <a data-toggle="collapse" href="#mercadoria">
                                     <span class="sub-item">Mercadoria</span>
                                     <span class="caret"></span>
                                 </a>
-                                <div class="collapse" id="subnav1">
+                                <div class="collapse" id="mercadoria">
                                     <ul class="nav nav-collapse subnav">
                                         <li>
                                             <a href="{{route('mercadorias.index')}}">
@@ -114,25 +114,26 @@
                                     </ul>
                                 </div>
                             </li>
+                            <!-- grupo -->
                             <li>
-                                <a data-toggle="collapse" href="#subnav2">
-                                    <span class="sub-item">Level 1</span>
+                                <a data-toggle="collapse" href="#grupo">
+                                    <span class="sub-item">Grupo</span>
                                     <span class="caret"></span>
                                 </a>
-                                <div class="collapse" id="subnav2">
+                                <div class="collapse" id="grupo">
                                     <ul class="nav nav-collapse subnav">
                                         <li>
-                                            <a href="#">
-                                                <span class="sub-item">Level 2</span>
+                                            <a href="{{route('grupos.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('grupos.create')}}">
+                                                <span class="sub-item">Cadastro</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="sub-item">Level 1</span>
-                                </a>
                             </li>
                         </ul>
 

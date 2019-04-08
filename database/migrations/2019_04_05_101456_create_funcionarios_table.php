@@ -48,7 +48,7 @@ class CreateFuncionariosTable extends Migration
             //Departamento
             $table->integer('departamento_id')->unsigned();
             $table->foreign('departamento_id')->references('id')
-                ->on('departamentos')
+                ->on('departamento')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
@@ -74,6 +74,7 @@ class CreateFuncionariosTable extends Migration
                 ->onUpdate('cascade');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -19,8 +19,8 @@ class CreateRetencaoTable extends Migration
             $table->string('observacao',30);
             $table->boolean('ativo')->default(1);
 
-            $table->boolean('ativo')->default(1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
