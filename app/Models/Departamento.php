@@ -19,4 +19,9 @@ class Departamento extends Model
         'nome',
         'descricao'
     ];
+
+    public function unidade()
+    {
+        return $this->belongsTo(Unidade::class);
+    }
 }

@@ -1,31 +1,32 @@
 $(document).ready(function () {
-    $('#grupo_id').on('change', function () {
+    $('#unidade_id').on('change', function () {
 
         // web
-        var _url = "/sub_grupos/" + $('#grupo_id').val();
+        var _url = "/departamentos/" + $('#unidade_id').val();
 
         $.ajax({
             url: _url,
             method: 'GET',
             success: function (response) {
+
                 // criando select de sub grupos
-                $("#sub_grupo_id").remove();
+                $("#departamento_select").remove();
 
                 $('<select>', {
-                    id: 'sub_grupo_id',
+                    id: 'departamento_select',
                     class: 'form-control',
-                    name: 'sub_grupo_id'
-                }).appendTo('#sub_grupos');
+                    name: 'departamento_select'
+                }).appendTo('#departamento_div');
 
                 $('<option value="">' +
-                    'Selecione um Sub Gropo' +
+                    'Selecione um Departamento' +
                     '</option>'
-                ).appendTo('#sub_grupo_id');
+                ).appendTo('#departamento_select');
                 $.each(response, function(key, value){
                     $('<option value="'+value.id+'">'+
                         value.nome
                         +'</option>')
-                        .appendTo('#sub_grupo_id');
+                        .appendTo('#departamento_select');
                 });
             }
         })

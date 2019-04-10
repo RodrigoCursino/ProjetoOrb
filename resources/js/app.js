@@ -1,4 +1,5 @@
 require('./fornecedores/fornecedor')
 require('./mercadorias/mercadoria')
+require('./funcionarios/funcionario')
 require('./bootstrap')
 require('./helpers')

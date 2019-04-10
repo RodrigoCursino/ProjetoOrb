@@ -269,6 +269,116 @@
                                 </div>
                             </li>
                             <!-- cargo -->
+                            <!-- centro custo-->
+                            <li>
+                                <a data-toggle="collapse" href="#centro">
+                                    <span class="sub-item">Centro Custo</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="centro">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('centroscusto.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('centroscusto.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- centro custo-->
+                            <!-- conta contábeis -->
+                            <li>
+                                <a data-toggle="collapse" href="#contacontabeis">
+                                    <span class="sub-item">Conta Contábil</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="contacontabeis">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('contacontabeis.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('contacontabeis.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- conta contábeis -->
+                            <!-- departamentos -->
+                            <li>
+                                <a data-toggle="collapse" href="#departamentos">
+                                    <span class="sub-item">Departamento</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="departamentos">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('departamentos.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('departamentos.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- departamentos -->
+                            <!-- fabricantes -->
+                            <li>
+                                <a data-toggle="collapse" href="#fabricantes">
+                                    <span class="sub-item">Fabricante</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="fabricantes">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('fabricantes.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('fabricantes.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- fabricantes -->
+                            <!-- funcionarios -->
+                            <li>
+                                <a data-toggle="collapse" href="#funcionarios">
+                                    <span class="sub-item">Funcionário</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="funcionarios">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('funcionarios.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('funcionarios.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- funcionarios -->
                         </ul>
 
                     </div>

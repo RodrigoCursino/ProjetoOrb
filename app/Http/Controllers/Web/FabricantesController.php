@@ -2,84 +2,75 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Http\Requests\FabricantesCreateRequest;
+use App\Http\Requests\FornecedorCreateRequest;
+use App\Models\Banco;
+use App\Models\Fabricante;
+use App\Models\Fornecedor;
+use App\Service\FabricantesService;
+use App\Service\FornecedorService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class FabricantesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private  $service;
+
+    public function __construct(FabricantesService $service)
+    {
+        $this->service = $service;
+    }
+
     public function index()
     {
-        //
+        $fabricantes = Fabricante::with('contato')
+            ->with('endereco')
+            ->where('ativo','=',1)
+            ->paginate(5);
+
+        return view('fabricante.index',compact('fabricantes'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return view('fabricante.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(FabricantesCreateRequest $request)
     {
-        //
+        $fabricante = $this->service->create($request);
+        return redirect(route('fabricantes.index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        //
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $fabricante = Fabricante::with('contato')
+            ->with('endereco')
+            ->where('id','=',$id)->first();
+
+        $bancos = Banco::all();
+
+        return view('fabricante.create',compact('bancos','fabricante'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(FabricantesCreateRequest $request, $id)
     {
-        //
+        $fabricante = $this->service->update($request, $id);
+        return redirect(route('fabricantes.index'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        if($this->service->destroy($id)){
+            return redirect(route('fabricantes.index'));
+        }
     }
 }

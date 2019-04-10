@@ -18,4 +18,9 @@ class CentroCusto extends Model
         'id',
         'nome'
     ];
+
+    public function dadosBancarios()
+    {
+       return $this->belongsTo(DadosBancarios::class);
+    }
 }
