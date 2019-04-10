@@ -2,58 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4adfdb5-d1ac-49cf-9c38-4eac68751491" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/CentrosCustoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/ContaContabeisController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/DepartamentosController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Routes/auth/centroscusto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Routes/auth/contacontabeis.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Routes/auth/departamentos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Routes/auth/funcionarios.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Service/CentroCustoService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Service/ContaContabilService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Service/DepartamentosService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Service/FabricantesService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Service/FuncionariosService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/DadosComunsCadastro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/funcionarios/funcionario.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/centro-custo/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/centro-custo/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/centro-custo/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/centro-custo/partials/form_dados.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/centro-custo/partials/form_dados_bancarios.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/conta-contabil/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/conta-contabil/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/conta-contabil/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/conta-contabil/partials/form_dados.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/departamento/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/departamento/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/departamento/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/departamento/partials/form_dados.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/partials/form_contato.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/partials/form_dados.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/partials/form_endereco.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/fabricante/partials/form_fornecedor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/partials/form_contato.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/partials/form_dados_bancarios.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/funcionario/partials/form_endereco.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/FabricantesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/FabricantesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/CentroCusto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/CentroCusto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Departamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Departamento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Service/FornecedorService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service/FornecedorService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/mercadorias/mercadoria.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/mercadorias/mercadoria.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cargo/partials/form_dados.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cargo/partials/form_dados.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/side-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/side-bar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +46,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/funcionarios/funcionario.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
@@ -105,11 +55,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="238" column="29" selection-start-line="238" selection-start-column="29" selection-end-line="238" selection-end-column="48" />
+            <state relative-caret-position="317">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
+              <folding>
+                <element signature="e#44#65#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,14 +146,14 @@
         <option value="$PROJECT_DIR$/app/Service/FuncionariosService.php" />
         <option value="$PROJECT_DIR$/resources/views/funcionario/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/funcionario/partials/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php" />
         <option value="$PROJECT_DIR$/resources/js/funcionarios/mercadoria.js" />
         <option value="$PROJECT_DIR$/resources/js/funcionarios/funcionarios.js" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Web/DepartamentosController.php" />
         <option value="$PROJECT_DIR$/resources/js/mercadorias/mercadoria.js" />
-        <option value="$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php" />
         <option value="$PROJECT_DIR$/resources/js/funcionarios/funcionario.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php" />
+        <option value="$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php" />
       </list>
     </option>
   </component>
@@ -303,7 +265,7 @@
       <path value="$PROJECT_DIR$/vendor/artesaos/defender" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1374" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -454,12 +416,12 @@
       <workItem from="1554726775161" duration="1696000" />
       <workItem from="1554729379861" duration="12722000" />
       <workItem from="1554747448220" duration="9785000" />
-      <workItem from="1554899383270" duration="23948000" />
+      <workItem from="1554899383270" duration="24357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143010000" />
+    <option name="totallyTimeSpent" value="143419000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -880,16 +842,6 @@
     <entry file="file://$PROJECT_DIR$/resources/js/funcionarios/mercadoria.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="e#44#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -935,17 +887,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="238" column="29" selection-start-line="238" selection-start-column="29" selection-end-line="238" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/funcionarios/funcionario.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/FuncionariosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
+          <folding>
+            <element signature="e#44#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/funcionario/partials/form_dados.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
         </state>
       </provider>
     </entry>

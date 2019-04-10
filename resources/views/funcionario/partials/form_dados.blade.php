@@ -3,18 +3,42 @@
 
      <!-- Nome -->
         <div class="form-group">
-            <label for="nome_funcionario">Nome : </label>
-            <input type="text"
-                   name="nome_funcionario"
-                   class="form-control"
-                   id="nome_funcionario"
-                   value="{{isset($funcionario->nome_funcionario) ? $funcionario->nome_funcionario : old('nome_funcionario')}}"
-            >
-            @if ($errors->has('nome_funcionario'))
-                <span class="help-block text-danger">
-                    <strong>{{ $errors->first('nome_funcionario') }}</strong>
-                </span>
-            @endif
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="nome_funcionario">Nome : </label>
+                    <input type="text"
+                           name="nome_funcionario"
+                           class="form-control"
+                           id="nome_funcionario"
+                           value="{{isset($funcionario->nome_funcionario) ? $funcionario->nome_funcionario : old('nome_funcionario')}}"
+                    >
+                    @if ($errors->has('nome_funcionario'))
+                        <span class="help-block text-danger">
+                            <strong>{{ $errors->first('nome_funcionario') }}</strong>
+                        </span>
+                    @endif
+                </div>
+                <div class="col-lg-6">
+                    <label for="cargo_id">Cargo : </label>
+                    <select type="text"
+                            name="cargo_id"
+                            class="form-control"
+                            id="cargo_id"
+                    >
+                        <option selected>Selecione uma Opção</option>
+                        @foreach($cargos as $cargo)
+                            <option {{isset($funcionario->cargo_id) && $funcionario->cargo_id == $cargo->id ? "selected" : ""}}  value="{{$cargo->id}}">
+                                {{$cargo->nome}}
+                            </option>
+                        @endforeach
+                    </select>
+                    @if ($errors->has('cargo_id'))
+                        <span class="help-block text-danger">
+                        <strong>{{ $errors->first('cargo_id') }}</strong>
+                     </span>
+                    @endif
+                </div>
+            </div>
         </div>
      <!-- Nome -->
 

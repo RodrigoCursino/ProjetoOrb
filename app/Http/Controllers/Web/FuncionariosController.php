@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Models\Banco;
+use App\Models\Cargo;
 use App\Models\Funcionario;
 use App\Models\Unidade;
 use App\Service\FuncionariosService;
@@ -36,7 +37,8 @@ class FuncionariosController extends Controller
     {
         $bancos   = Banco::list();
         $unidades = Unidade::list();
-        return view('funcionario.create',compact('bancos','unidades'));
+        $cargos   = Cargo::list();
+        return view('funcionario.create',compact('bancos','unidades','cargos'));
     }
 
     public function store(Request $request)
@@ -60,8 +62,9 @@ class FuncionariosController extends Controller
 
         $bancos   = Banco::list();
         $unidades = Unidade::list();
+        $cargos   = Cargo::list();
 
-        return view('funcionario.create',compact('bancos','funcionario','unidades'));
+        return view('funcionario.create',compact('bancos','funcionario','unidades','cargos'));
     }
 
     public function update(Request $request, $id)
