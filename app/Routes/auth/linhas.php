@@ -1,3 +1,3 @@
 <?php
 
-Route::resource('fornecedores','Web\\FornecedoresController');
+Route::resource('linhas','Web\\LinhasController');

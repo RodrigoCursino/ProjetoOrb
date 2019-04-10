@@ -1,3 +1,3 @@
 <?php
 
-Route::resource('linhas','Web\\LinhasController');
+Route::resource('colecoes','Web\\ColecoesController');

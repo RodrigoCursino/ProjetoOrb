@@ -17,6 +17,7 @@ class CreateRetencaoTable extends Migration
             $table->increments('id');
             $table->string('nome',30);
             $table->string('observacao',30);
+
             $table->boolean('ativo')->default(1);
 
             $table->timestamps();

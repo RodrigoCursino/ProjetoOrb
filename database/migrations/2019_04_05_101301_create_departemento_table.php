@@ -17,6 +17,7 @@ class CreateDepartementoTable extends Migration
             $table->increments('id');
             $table->string('nome',30);
             $table->string('descricao',50);
+
             $table->boolean('ativo')->default(1);
 
             //forignKeys

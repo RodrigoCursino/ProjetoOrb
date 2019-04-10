@@ -27,7 +27,9 @@ class CreateMarcaTable extends Migration
                 ->onUpdate('cascade');
 
             $table->boolean('ativo')->default(1);
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -93,6 +93,29 @@
                                     </ul>
                                 </div>
                             </li>
+                            <!-- fornecedor -->
+                            <!-- ncm -->
+                            <li>
+                                <a data-toggle="collapse" href="#ncm">
+                                    <span class="sub-item">NCM</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="ncm">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('ncms.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('ncms.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- ncm -->
                             <!-- mercadoria -->
                             <li>
                                 <a data-toggle="collapse" href="#mercadoria">
@@ -135,6 +158,117 @@
                                     </ul>
                                 </div>
                             </li>
+                            <!-- grupo -->
+                            <!-- linha -->
+                            <li>
+                                <a data-toggle="collapse" href="#linha">
+                                    <span class="sub-item">Linha</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="linha">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('linhas.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('linhas.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- linha -->
+                            <!-- categoria -->
+                            <li>
+                                <a data-toggle="collapse" href="#categoria">
+                                    <span class="sub-item">Categoria</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="categoria">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('categorias.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('categorias.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- categoria -->
+                            <!-- colecao -->
+                            <li>
+                                <a data-toggle="collapse" href="#colecao">
+                                    <span class="sub-item">Coleção</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="colecao">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('colecoes.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('colecoes.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- colecao -->
+                            <!-- marca -->
+                            <li>
+                                <a data-toggle="collapse" href="#marca">
+                                    <span class="sub-item">Marca</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="marca">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('marcas.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('marcas.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- marca -->
+                            <!-- cargo -->
+                            <li>
+                                <a data-toggle="collapse" href="#cargo">
+                                    <span class="sub-item">Cargo</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="cargo">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('cargos.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('cargos.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- cargo -->
                         </ul>
 
                     </div>

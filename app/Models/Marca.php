@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Traits\TmontecHelper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Marca extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, TmontecHelper;
 
     protected $dates = ['deleted_at'];
 
@@ -22,4 +23,5 @@ class Marca extends Model
     {
         return $this->belongsTo(Fabricante::class);
     }
+
 }

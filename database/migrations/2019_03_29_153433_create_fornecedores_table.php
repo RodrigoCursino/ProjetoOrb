@@ -17,6 +17,7 @@ class CreateFornecedoresTable extends Migration
             $table->string('ie',14);
             $table->string('observacao',500);
             $table->boolean('forn_mercadoria');
+
             $table->boolean('ativo')->default(1);
 
             //forignKeys

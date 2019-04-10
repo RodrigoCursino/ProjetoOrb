@@ -16,6 +16,7 @@ class CreateSubGruposTable extends Migration
         Schema::create('sub_grupos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome',30);
+
             $table->boolean('ativo')->default(1);
 
             //Grupos

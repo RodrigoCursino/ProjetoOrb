@@ -19,6 +19,7 @@ class CreateNcmTable extends Migration
             $table->string('descricao',500);
             $table->boolean('ativo')->default(1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

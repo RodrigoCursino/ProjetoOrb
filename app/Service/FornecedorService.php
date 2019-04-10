@@ -119,17 +119,21 @@ class FornecedorService
 
        // Contato
        $contato    = Contato::findOrFail($fornecedor->contato_id);
-       $contato->delete();
+       $contato->ativo = 0;
+       $contato->save();
 
        // Endereco
        $endereco   = Endereco::findOrFail($fornecedor->endereco_id);
-       $endereco->delete();
+       $endereco->ativo = 0;
+       $endereco->save();
 
        // Dados Bancários
        $dadosBancarios   = DadosBancarios::findOrFail($fornecedor->dados_bancarios_id);
-       $dadosBancarios->delete();
+       $dadosBancarios->ativo = 0;
+       $dadosBancarios->save();
 
-       $fornecedor->delete();
+       $fornecedor->ativo = 0;
+       $fornecedor->save();
 
        return true;
 

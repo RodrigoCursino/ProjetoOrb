@@ -1,3 +1,3 @@
 <?php
 
-Route::resource('colecoes','Web\\ColecoesController');
+Route::resource('categorias','Web\\CategoriasController');

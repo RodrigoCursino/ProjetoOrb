@@ -16,6 +16,7 @@ class CreateCentroCustoTable extends Migration
         Schema::create('centro_custo', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome',150);
+
             $table->boolean('ativo')->default(1);
 
             //Dados Bancários

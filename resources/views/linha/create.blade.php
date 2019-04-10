@@ -7,14 +7,14 @@
             <div class="page-inner py-5">
                 <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                     <div>
-                        <h2 class="text-white pb-2 fw-bold">Grupo</h2>
+                        <h2 class="text-white pb-2 fw-bold">Linha</h2>
                     </div>
                     <div class="ml-md-auto py-2 py-md-0">
                         <button class="btn btn-secondary btn-round"
                                 data-toggle="modal"
                                 data-target="#formFornecedor"
                         >
-                            Add Grupo
+                            Add Linha
                         </button>
                     </div>
                 </div>
@@ -26,13 +26,13 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="card-head-row card-tools-still-right">
-                                <h4 class="card-title">Cadastro Grupo</h4>
+                                <h4 class="card-title">Cadastro Linha</h4>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
-                                    @include('grupo.partials.form')
+                                    @include('linha.partials.form')
                                 </div>
                             </div>
                         </div>

@@ -53,10 +53,10 @@
                                                     @foreach($mercadorias as $mercadoria)
                                                         <tr>
                                                             <td>{{$mercadoria->nome}}</td>
-                                                            <td>{{$mercadoria->ncm}}</td>
-                                                            <td>{{$mercadoria->grupo_id}}</td>
-                                                            <td>{{$mercadoria->sub_grupo_id}}</td>
-                                                            <td>{{$mercadoria->fornecedor_id}}</td>
+                                                            <td>{{$mercadoria->ncm->cod}}</td>
+                                                            <td>{{$mercadoria->grupo->nome}}</td>
+                                                            <td>{{$mercadoria->subGrupo->nome}}</td>
+                                                            <td>{{$mercadoria->fornecedor->nome_fantasia}}</td>
                                                             <td>
                                                                 <a class="btn btn-primary"
                                                                    href="{{route('mercadorias.edit',['id' => $mercadoria->id])}}"

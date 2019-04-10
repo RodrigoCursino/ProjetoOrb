@@ -20,6 +20,7 @@ class CreateTabelaPrecoTable extends Migration
             $table->string('observacao', 500);
             $table->decimal('desconto_maximo', 8,2);
             $table->dateTime('validade');
+
             $table->boolean('ativo')->default(1);
 
             $table->timestamps();

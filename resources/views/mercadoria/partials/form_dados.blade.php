@@ -11,6 +11,7 @@
                          class="form-control"
                          id="fornecedor_id"
                  >
+                     <option selected>Selecione uma Opção</option>
                      @foreach($fornecedores as $fornecedor)
                          <option {{isset($mercadoria->fornecedor_id) && $mercadoria->fornecedor_id == $fornecedor->id ? "selected" : ""}}  value="{{$fornecedor->id}}">{{$fornecedor->nome_fantasia}}</option>
                      @endforeach
@@ -37,6 +38,7 @@
                          class="form-control"
                          id="grupo_id"
                  >
+                     <option selected>Selecione uma Opção</option>
                      @foreach($grupos as $grupo)
                          <option {{isset($mercadoria->grupo_id) && $mercadoria->grupo_id == $grupo->id ? "selected" : ""}} value="{{$grupo->id}}">{{$grupo->nome}}</option>
                      @endforeach
@@ -100,17 +102,24 @@
              <!-- Nome -->
              <!-- NCM -->
              <div class="col-lg-6">
-                 <label for="ncm">NCM : </label>
-                 <input type="text"
-                        name="ncm"
-                        class="form-control"
-                        id="ncm"
-                        value="{{isset($mercadoria->ncm) ? $mercadoria->ncm : old('ncm')}}"
+                 <label for="ncm_id">NCM : </label>
+                 <select type="text"
+                         name="ncm_id"
+                         class="form-control"
+                         id="ncm_id"
                  >
-                 @if ($errors->has('ncm'))
+                     <option selected>Selecione uma Opção</option>
+                     @foreach($ncms as $ncm)
+                         <option {{isset($mercadoria->ncm_id) && $mercadoria->ncm_id == $ncm->id ? "selected" : ""}}
+                                 value="{{$ncm->id}}">
+                                 {{$ncm->cod}}
+                         </option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('ncm_id'))
                      <span class="help-block text-danger">
-                  <strong>{{ $errors->first('ncm') }}</strong>
-                </span>
+                        <strong>{{ $errors->first('ncm_id') }}</strong>
+                     </span>
                  @endif
              </div>
              <!-- NCM -->
@@ -118,39 +127,160 @@
      </div>
      <!-- Nome e NCM -->
 
-     <!-- Unidade Mediada e Unidade Caixa -->
+
+     <!-- Nome e NCM -->
+     <div class="form-group">
+         <div class="row">
+             <!-- Categoria -->
+             <div class="col-lg-6">
+                 <label for="ncm_id">Categoria : </label>
+                 <select type="text"
+                         name="categoria_id"
+                         class="form-control"
+                         id="categoria_id"
+                 >
+                     <option selected>Selecione uma Opção</option>
+                     @foreach($categorias as $categoria)
+                         <option {{isset($mercadoria->categoria_id) && $mercadoria->categoria_id == $categoria->id ? "selected" : ""}}
+                                 value="{{$categoria->id}}">
+                             {{$categoria->nome}}
+                         </option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('categoria_id'))
+                     <span class="help-block text-danger">
+                        <strong>{{ $errors->first('categoria_id') }}</strong>
+                     </span>
+                 @endif
+             </div>
+             <!-- Categoria -->
+             <!-- Coleção -->
+             <div class="col-lg-6">
+                 <label for="colecao_id">Coleção : </label>
+                 <select type="text"
+                         name="colecao_id"
+                         class="form-control"
+                         id="colecao_id"
+                 >
+                     <option selected>Selecione uma Opção</option>
+                     @foreach($colecoes as $colecao)
+                         <option {{isset($mercadoria->colecao_id) && $mercadoria->colecao_id == $colecao->id ? "selected" : ""}}
+                                 value="{{$colecao->id}}">
+                             {{$colecao->nome}}
+                         </option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('colecao_id'))
+                     <span class="help-block text-danger">
+                        <strong>{{ $errors->first('colecao_id') }}</strong>
+                     </span>
+                 @endif
+             </div>
+             <!-- Coleção -->
+         </div>
+     </div>
+     <!-- Nome e NCM -->
+
+
+     <!-- Linha e marca -->
+     <div class="form-group">
+         <div class="row">
+             <!-- Linha -->
+             <div class="col-lg-6">
+                 <label for="linha_id">Linha : </label>
+                 <select type="text"
+                         name="linha_id"
+                         class="form-control"
+                         id="linha_id"
+                 >
+                     <option selected>Selecione uma Opção</option>
+                     @foreach($linhas as $linha)
+                         <option {{isset($mercadoria->linha_id) && $mercadoria->linha_id == $linha->id ? "selected" : ""}}
+                                 value="{{$linha->id}}">
+                             {{$linha->nome}}
+                         </option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('linha_id'))
+                     <span class="help-block text-danger">
+                        <strong>{{ $errors->first('linha_id') }}</strong>
+                     </span>
+                 @endif
+             </div>
+             <!-- Linha -->
+             <!-- Marca -->
+             <div class="col-lg-6">
+                 <label for="marca_id">Marca : </label>
+                 <select type="text"
+                         name="marca_id"
+                         class="form-control"
+                         id="marca_id"
+                 >
+                         <option selected>Selecione uma Opção</option>
+                     @foreach($marcas as $marca)
+                         <option {{isset($mercadoria->marca_id) && $mercadoria->marca_id == $marca->id ? "selected" : ""}}
+                                 value="{{$marca->id}}">
+                             {{$marca->nome}}
+                         </option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('marca_id'))
+                     <span class="help-block text-danger">
+                        <strong>{{ $errors->first('marca_id') }}</strong>
+                     </span>
+                 @endif
+             </div>
+             <!-- Marca -->
+         </div>
+     </div>
+
+     <!-- Linha e marca -->
      <div class="form-group">
          <div class="row">
              <!-- Unidade Medida -->
              <div class="col-lg-6">
-                 <label for="unidade_medida">Unidade Medida : </label>
-                 <input type="text"
-                        name="unidade_medida"
-                        class="form-control"
-                        id="unidade_medida"
-                        value="{{isset($mercadoria->unidade_medida) ? $mercadoria->unidade_medida : old('unidade_medida')}}"
+                 <label for="unidade_medida_id">Unidade Medida : </label>
+                 <select type="text"
+                         name="unidade_medida_id"
+                         class="form-control"
+                         id="unidade_medida_id"
                  >
-                 @if ($errors->has('unidade_medida'))
+                     <option selected>Selecione uma Opção</option>
+                     @foreach($unidadesMedida as $unidadeMedida)
+                         <option {{isset($mercadoria->unidade_medida_id) && $mercadoria->unidade_medida_id == $unidadeMedida->id ? "selected" : ""}}
+                                 value="{{$unidadeMedida->id}}">
+                             {{$unidadeMedida->legenda}}
+                         </option>
+                     @endforeach
+                 </select>
+                 @if ($errors->has('unidade_medida_id'))
                      <span class="help-block text-danger">
-                    <strong>{{ $errors->first('unidade_medida') }}</strong>
-                </span>
+                        <strong>{{ $errors->first('unidade_medida_id') }}</strong>
+                     </span>
                  @endif
              </div>
              <!-- Unidade Medida -->
              <!-- Unidade Caixa -->
              <div class="col-lg-6">
-                 <label for="unidade_caixa">Unidade Caixa : </label>
-                 <input type="text"
-                        name="unidade_caixa"
-                        class="form-control"
-                        id="unidade_caixa"
-                        value="{{isset($mercadoria->unidade_caixa) ? $mercadoria->unidade_caixa : old('unidade_caixa')}}"
-                 >
-                 @if ($errors->has('unidade_caixa'))
-                     <span class="help-block text-danger">
-                  <strong>{{ $errors->first('unidade_caixa') }}</strong>
-                </span>
-                 @endif
+                     <label for="unidade_caixa_id">Unidade Caixa : </label>
+                     <select type="text"
+                             name="unidade_caixa_id"
+                             class="form-control"
+                             id="unidade_caixa_id"
+                     >
+                         <option selected>Selecione uma Opção</option>
+                         @foreach($unidadesCaixa as $unidadeCaixa)
+                             <option {{isset($mercadoria->unidade_caixa_id) && $mercadoria->unidade_caixa_id == $unidadeCaixa->id ? "selected" : ""}}
+                                     value="{{$unidadeCaixa->id}}">
+                                 {{$unidadeCaixa->legenda}}
+                             </option>
+                         @endforeach
+                     </select>
+                     @if ($errors->has('unidade_caixa_id'))
+                         <span class="help-block text-danger">
+                        <strong>{{ $errors->first('unidade_caixa_id') }}</strong>
+                     </span>
+                     @endif
              </div>
              <!-- Unidade Caixa -->
          </div>

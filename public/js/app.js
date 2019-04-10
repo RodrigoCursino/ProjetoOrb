@@ -19553,7 +19553,7 @@ $(document).ready(function () {
           class: 'form-control',
           name: 'sub_grupo_id'
         }).appendTo('#sub_grupos');
-        $('<option value="">Selecione uma unidade</option>').appendTo('#sub_grupo_id');
+        $('<option value="">Selecione um Sub Grupo</option>').appendTo('#sub_grupo_id');
         $.each(response, function (key, value) {
           $('<option value="' + value.id + '">' + value.nome + '</option>').appendTo('#sub_grupo_id');
         });

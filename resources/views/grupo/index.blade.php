@@ -50,7 +50,9 @@
                                             @foreach($grupos as $grupo)
                                                 <tr>
                                                     <td>{{$grupo->nome}}</td>
-                                                    <td>{{$grupo->ncm}}</td>
+                                                    <td>
+                                                        {{isset($grupo->ncm->cod) ? $grupo->ncm->cod : ''}}
+                                                    </td>
                                                     <td>
                                                         <a class="btn btn-primary"
                                                            href="{{route('grupos.edit',['id' => $grupo->id])}}"

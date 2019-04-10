@@ -16,8 +16,10 @@ class CreateLinhaTable extends Migration
         Schema::create('linha', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome',100);
+
             $table->boolean('ativo')->default(1);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

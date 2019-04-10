@@ -11,8 +11,6 @@ use App\Http\Controllers\Controller;
 
 class FornecedoresController extends Controller
 {
-
-
     private  $service;
 
     public function __construct(FornecedorService $service)
@@ -25,6 +23,7 @@ class FornecedoresController extends Controller
         $fornecedores = Fornecedor::with('contato')
                                   ->with('endereco')
                                   ->with('dadosBancarios')
+                                  ->where('ativo','=',1)
                                   ->paginate(5);
 
         return view('fornecedor.index',compact('fornecedores'));

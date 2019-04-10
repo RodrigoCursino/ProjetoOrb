@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Traits\TmontecHelper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Mercadoria extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, TmontecHelper;
 
     protected $dates = ['deleted_at'];
 
@@ -21,13 +22,19 @@ class Mercadoria extends Model
 
     public function marca()
     {
-        return $this->belongsTo(Marca::class);
+        return $this->belongsTo(Marca::class)->with('fabricante');
+    }
+
+    public function ncm()
+    {
+        return $this->belongsTo(NCM::class);
     }
 
     public function linha()
     {
         return $this->belongsTo(Linha::class);
     }
+
 
     public function colecao()
     {
@@ -39,10 +46,6 @@ class Mercadoria extends Model
         return $this->belongsTo(Categoria::class);
     }
 
-    public function ncm()
-    {
-        return $this->belongsTo(NCM::class);
-    }
 
     public function unidadeMedida()
     {

@@ -1,3 +1,3 @@
 <?php
 
-Route::resource('fabricantes', 'Web\\FabricantesController');
+Route::resource('marcas', 'Web\\MarcasController');

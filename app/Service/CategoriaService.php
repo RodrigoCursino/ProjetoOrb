@@ -10,35 +10,36 @@ namespace App\Service;
 
 
 use App\Http\Requests\LinhaCreateRequest;
-use App\Models\Linha;
+use App\Models\Categoria;
 use Illuminate\Support\Facades\DB;
 
-class LinhaService
+class CategoriaService
 {
     public function create(LinhaCreateRequest $request)
     {
         return DB::transaction(function () use ($request) {
 
-            $linha = new Linha();
+            $categoria = new Categoria();
 
-            $linha->nome       = $request->input('nome');
-            $linha->save();
+            $categoria->nome       = $request->input('nome');
+            $categoria->save();
 
-            return $linha;
+            return $categoria;
 
         });
     }
 
     public function update(LinhaCreateRequest $request, $id)
     {
+
         return DB::transaction(function () use ($request, $id) {
 
-            $linha = Linha::findOrFail($id);
+            $categoria = Categoria::findOrFail($id);
 
-            $linha->nome       = $request->input('nome');
-            $linha->save();
+            $categoria->nome       = $request->input('nome');
+            $categoria->save();
 
-            return $linha;
+            return $categoria;
 
         });
     }
@@ -47,8 +48,9 @@ class LinhaService
     {
         return DB::transaction(function () use ($id) {
 
-            $linha = Linha::findOrFail($id);
-            $linha->ativo = 0;
+            $categoria = Categoria::findOrFail($id);
+            $categoria->ativo = 0;
+            $categoria->save();
             return true;
 
         });

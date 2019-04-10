@@ -22,6 +22,7 @@ class CreateUnidadesTable extends Migration
             $table->string('ie',20);
             $table->boolean('loja')->default(1);
             $table->string('observacao',500);
+
             $table->boolean('ativo')->default(1);
 
             //forignKeys

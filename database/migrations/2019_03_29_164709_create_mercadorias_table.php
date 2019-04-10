@@ -18,6 +18,7 @@ class CreateMercadoriasTable extends Migration
             $table->increments('id');
             $table->string('nome',250);
             $table->string('observacao',500);
+
             $table->boolean('ativo')->default(1);
 
             //ForeignKeys

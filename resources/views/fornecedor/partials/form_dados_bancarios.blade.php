@@ -79,9 +79,9 @@
                  @endforeach
              </select>
              @if ($errors->has('banco_id'))
-                 <span class="help-block text-danger">
-            <strong>{{ $errors->first('banco_id') }}</strong>
-         </span>
+                  <span class="help-block text-danger">
+                     <strong>{{ $errors->first('banco_id') }}</strong>
+                  </span>
              @endif
          </div>
          <!-- Banco -->
