@@ -44,6 +44,11 @@ class Funcionario extends Model
         return $this->belongsTo(Cargo::class);
     }
 
+    public function departamento ()
+    {
+        return $this->belongsTo(Departamento::class);
+    }
+
 
     public function contato ()
     {

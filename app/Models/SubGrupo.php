@@ -16,4 +16,9 @@ class SubGrupo extends Model
     protected $fillable = [
         'nome'
     ];
+
+    public function grupo()
+    {
+        return $this->belongsTo(Grupo::class);
+    }
 }

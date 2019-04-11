@@ -1,23 +1,45 @@
 
      <!-- Início do form -->
+     <!-- Nome -->
+     <div class="form-group">
+         <div class="row">
+             <div class="col-lg-12">
+                 <label for="nome_funcionario">Nome : </label>
+                 <input type="text"
+                        name="nome_funcionario"
+                        class="form-control"
+                        id="nome_funcionario"
+                        value="{{isset($funcionario->nome) ? $funcionario->nome : old('nome_funcionario')}}"
+                 >
+                 @if ($errors->has('nome_funcionario'))
+                     <span class="help-block text-danger">
+                            <strong>{{ $errors->first('nome_funcionario') }}</strong>
+                        </span>
+                 @endif
+             </div>
+         </div>
+     </div>
+     <!-- Nome -->
+
 
      <!-- Nome -->
         <div class="form-group">
             <div class="row">
                 <div class="col-lg-6">
-                    <label for="nome_funcionario">Nome : </label>
-                    <input type="text"
-                           name="nome_funcionario"
+                    <label for="data_nascimento">Nome : </label>
+                    <input type="date"
+                           name="data_nascimento"
                            class="form-control"
-                           id="nome_funcionario"
-                           value="{{isset($funcionario->nome_funcionario) ? $funcionario->nome_funcionario : old('nome_funcionario')}}"
+                           id="data_nascimento"
+                           value="{{isset($funcionario->data_nascimento) ? $funcionario->data_nascimento : old('data_nascimento')}}"
                     >
-                    @if ($errors->has('nome_funcionario'))
+                    @if ($errors->has('data_nascimento'))
                         <span class="help-block text-danger">
-                            <strong>{{ $errors->first('nome_funcionario') }}</strong>
+                            <strong>{{ $errors->first('data_nascimento') }}</strong>
                         </span>
                     @endif
                 </div>
+
                 <div class="col-lg-6">
                     <label for="cargo_id">Cargo : </label>
                     <select type="text"

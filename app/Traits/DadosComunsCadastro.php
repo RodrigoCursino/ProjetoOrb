@@ -24,6 +24,7 @@ trait DadosComunsCadastro
         $endereco->logradouro      = $request->input('logradouro');
         $endereco->numero          = $request->input('numero');
         $endereco->bairro          = $request->input('bairro');
+        $endereco->complemento     = $request->input('complemento') ? $request->input('complemento') : '' ;
         $endereco->cidade          = $request->input('cidade');
         $endereco->estado          = $request->input('estado');
         $endereco->pais            = $request->input('pais');
@@ -71,6 +72,7 @@ trait DadosComunsCadastro
         $endereco->logradouro      = $request->input('logradouro');
         $endereco->numero          = $request->input('numero');
         $endereco->bairro          = $request->input('bairro');
+        $endereco->complemento     = $request->input('complemento') ? $request->input('complemento') : '' ;
         $endereco->cidade          = $request->input('cidade');
         $endereco->estado          = $request->input('estado');
         $endereco->pais            = $request->input('pais');

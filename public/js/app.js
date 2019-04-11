@@ -19541,7 +19541,7 @@ $(document).ready(function () {
         }).appendTo('#departamento_div');
         $('<option value="">' + 'Selecione um Departamento' + '</option>').appendTo('#departamento_select');
         $.each(response, function (key, value) {
-          $('<option value="' + value.id + '">' + value.nome + '</option>').appendTo('#departamento_select');
+          $('<option value="' + parseInt(value.id) + '">' + value.nome + '</option>').appendTo('#departamento_select');
         });
       }
     });
@@ -19618,8 +19618,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xamp73\htdocs\padrao-laravel-5.7\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xamp73\htdocs\padrao-laravel-5.7\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/rodrigo/projects/projetoorb/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/rodrigo/projects/projetoorb/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

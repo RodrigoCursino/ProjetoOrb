@@ -23,7 +23,7 @@ $(document).ready(function () {
                     '</option>'
                 ).appendTo('#departamento_select');
                 $.each(response, function(key, value){
-                    $('<option value="'+value.id+'">'+
+                    $('<option value="'+parseInt(value.id)+'">'+
                         value.nome
                         +'</option>')
                         .appendTo('#departamento_select');

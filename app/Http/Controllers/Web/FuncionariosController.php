@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Http\Requests\FuncionariosCreateRequest;
 use App\Models\Banco;
 use App\Models\Cargo;
 use App\Models\Funcionario;
@@ -24,6 +25,7 @@ class FuncionariosController extends Controller
         $funcionarios = Funcionario::with('contato')
             ->with('endereco')
             ->with('dadosBancarios')
+            ->with('departamento')
             ->with('unidade')
             ->with('cargo')
             ->where('ativo','=',1)
@@ -41,7 +43,7 @@ class FuncionariosController extends Controller
         return view('funcionario.create',compact('bancos','unidades','cargos'));
     }
 
-    public function store(Request $request)
+    public function store(FuncionariosCreateRequest $request)
     {
         $fornecedor = $this->service->create($request);
         return redirect(route('funcionarios.index'));
@@ -57,6 +59,8 @@ class FuncionariosController extends Controller
     {
         $funcionario = Funcionario::with('contato')
             ->with('endereco')
+            ->with('departamento')
+            ->with('departamento')
             ->with('dadosBancarios')
             ->where('id','=',$id)->first();
 
@@ -67,7 +71,7 @@ class FuncionariosController extends Controller
         return view('funcionario.create',compact('bancos','funcionario','unidades','cargos'));
     }
 
-    public function update(Request $request, $id)
+    public function update(FuncionariosCreateRequest $request, $id)
     {
         $funcionario = $this->service->update($request, $id);
         return redirect(route('funcionarios.index'));

@@ -3,7 +3,7 @@
 @section('content')
     {{--<div class="main-panel">--}}
     <div class="content">
-        <div class="panel-header bg-primary-gradient">
+        <div class="panel-header bg-primary-grey">
             <div class="page-inner py-5">
                 <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                     <div>

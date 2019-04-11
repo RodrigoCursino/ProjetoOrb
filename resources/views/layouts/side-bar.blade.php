@@ -225,6 +225,28 @@
                                 </div>
                             </li>
                             <!-- colecao -->
+                            <!-- retencao -->
+                            <li>
+                                <a data-toggle="collapse" href="#retencao">
+                                    <span class="sub-item">Retenção</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="retencao">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('retencoes.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('retencoes.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- colecao -->
                             <!-- marca -->
                             <li>
                                 <a data-toggle="collapse" href="#marca">
@@ -269,6 +291,28 @@
                                 </div>
                             </li>
                             <!-- cargo -->
+                            <!-- unidade -->
+                            <li>
+                                <a data-toggle="collapse" href="#unidade">
+                                    <span class="sub-item">Unidade</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="unidade">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('unidades.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('unidades.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- unidade -->
                             <!-- centro custo-->
                             <li>
                                 <a data-toggle="collapse" href="#centro">
@@ -291,6 +335,72 @@
                                 </div>
                             </li>
                             <!-- centro custo-->
+                            <!-- sub grupo-->
+                            <li>
+                                <a data-toggle="collapse" href="#sub-grupo">
+                                    <span class="sub-item">Sub Grupo</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="sub-grupo">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('subgrupos.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('subgrupos.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- sub grupo-->
+                            <!-- unidade-caixa -->
+                            <li>
+                                <a data-toggle="collapse" href="#unidade-caixa">
+                                    <span class="sub-item">Unidade Caixa</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="unidade-caixa">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('unidadescaixa.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('unidadescaixa.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- unidade-caixa -->
+                            <!-- unidade-medida -->
+                            <li>
+                                <a data-toggle="collapse" href="#unidade-medida">
+                                    <span class="sub-item">Unidade Medida</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <div class="collapse" id="unidade-medida">
+                                    <ul class="nav nav-collapse subnav">
+                                        <li>
+                                            <a href="{{route('unidadesmedida.index')}}">
+                                                <span class="sub-item">Listagem</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{route('unidadesmedida.create')}}">
+                                                <span class="sub-item">Cadastro</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- unidade-medida -->
                             <!-- conta contábeis -->
                             <li>
                                 <a data-toggle="collapse" href="#contacontabeis">
