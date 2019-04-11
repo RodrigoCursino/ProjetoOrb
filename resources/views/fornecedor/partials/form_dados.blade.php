@@ -107,10 +107,16 @@
                     type="radio"
                     name="forn_mercadoria"
                     value="0"
-                     {{isset($fornecedor->forn_mercadoria) && $fornecedor->forn_mercadoria == "0" ? "checked" : ""}}
+                    {{isset($fornecedor->forn_mercadoria) && $fornecedor->forn_mercadoria == "0" ? "checked" : ""}}
              >
              <span class="form-radio-sign">Não</span>
          </label>
+         <br>
+         @if ($errors->has('forn_mercadoria'))
+             <span class="help-block text-danger">
+              <strong>{{ $errors->first('forn_mercadoria') }}</strong>
+            </span>
+         @endif
      </div>
      <!-- Fornece Mercadoria -->
 

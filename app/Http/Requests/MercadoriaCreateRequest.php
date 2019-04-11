@@ -24,7 +24,7 @@ class MercadoriaCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            "fornecedor_id"           =>  "required",
+            "fornecedor_id"           =>  "required|numeric",
             "grupo_id"                =>  "required|numeric",
             "sub_grupo_id"            =>  "required",
             "nome"                    =>  "required",
@@ -55,6 +55,7 @@ class MercadoriaCreateRequest extends FormRequest
           "marca_id.numeric"          => "Por favor selecione uma das opções.",
           "unidade_medida_id.numeric" => "Por favor selecione uma das opções.",
           "unidade_caixa_id.numeric"  => "Por favor selecione uma das opções.",
+          "fornecedor_id.numeric"     => "Por favor selecione uma das opções.",
           "grupo_id.numeric"          => "Por favor selecione uma das opções.",
           "sub_grupo_id.required"     => "O campo Sub Grupo é obrigatório."
         ];

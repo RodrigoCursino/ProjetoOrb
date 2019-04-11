@@ -26,6 +26,7 @@ class UnidadesCreateRequest extends FormRequest
         return [
             "nome_unidade"      => "required",
             "cnpj"              => "required",
+            "loja"              => "required",
             "ie"                => "required",
             "nome_fantasia"     => "required",
             "razao_social"      => "required",

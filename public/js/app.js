@@ -19576,7 +19576,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('#grupo_id').on('change', function () {
     // web
-    var _url = "/sub_grupos/" + $('#grupo_id').val();
+    var _url = "/subgrupos/" + $('#grupo_id').val();
 
     $.ajax({
       url: _url,

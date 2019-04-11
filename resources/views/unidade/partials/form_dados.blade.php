@@ -191,6 +191,12 @@
              >
              <span class="form-radio-sign">Não</span>
          </label>
+         <br>
+         @if ($errors->has('loja'))
+             <span class="help-block text-danger">
+              <strong>{{ $errors->first('loja') }}</strong>
+            </span>
+         @endif
      </div>
      <!-- Loja -->
 
